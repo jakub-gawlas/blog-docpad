@@ -1,0 +1,9 @@
+---
+layout: page
+---
+// Set title and subtitle
+- document.title = document.tag
+- document.subtitle = "Results for tag " + document.tag
+
+- each post in getFiles({tags: {$has: document.tag}}, [{title: 1}, {date: -1}]).toJSON()
+    != partial('post-list-item', {post: post})

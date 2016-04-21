@@ -39,7 +39,7 @@ docpadConfig = {
       # Styles
       styles: [
         "/vendor/twitter-bootstrap/css/bootstrap.min.css"
-        "/styles/clean-blog.css"
+        "/styles/blog.css"
       ]
 
       # Scripts
@@ -111,7 +111,7 @@ docpadConfig = {
   plugins:
     tags:
       injectDocumentHelper: (document) ->
-        document.setMeta(layout: 'page')
+        document.setMeta(layout: 'tag')
 
 
     # =================================

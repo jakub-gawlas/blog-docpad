@@ -1,0 +1,14 @@
+---
+title: Tags
+subtitle: "All tags used in posts"
+pageOrder: 3
+urls:
+- '/'
+---
+
+ul
+- each tag in getCollection('tags').toJSON()
+    li
+        a(href= tag.url)= tag.tagName
+
+

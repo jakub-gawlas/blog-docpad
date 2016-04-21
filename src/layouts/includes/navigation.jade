@@ -14,5 +14,11 @@ nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
         #navbar-collapse.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
                 - each page in getCollection('pages').toJSON()
-                    li(class=page.url == document.url ? "active" : "")
-                        a(href=page.url)= page.title
+                    li(class= page.url == document.url ? "active" : "")
+                        a(href= page.url, id= page.title=="Tags" ? "show-tags" : "")= page.title
+
+        #nav-tags
+            ul.nav
+                - each tag in getCollection('tags').toJSON()
+                    li
+                        a(href= tag.url)= tag.tagName
