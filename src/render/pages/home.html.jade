@@ -1,0 +1,11 @@
+---
+title: Home
+subtitle: "Welcome on the Blog DocPad"
+pageOrder: 1
+urls:
+- '/'
+---
+
+- each post in getCollection('posts').toJSON()
+    != partial('post-list-item', {url: post.url, title: post.title, subtitle: post.subtitle, author: post.author, date: post.date })
+
