@@ -26,3 +26,6 @@ buttonShowTags.click ->
   navTags.toggle(100)
   return false
 
+# --------------------------------
+# Tooltips
+$(".has-tooltip").tooltip()

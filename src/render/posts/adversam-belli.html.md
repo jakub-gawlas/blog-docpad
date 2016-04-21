@@ -1,7 +1,7 @@
 ```
 title: Adversam belli
 subtitle: Excutit imago institerant mora matres
-author: Lorem Ipsum
+author: Ipsum Lorem
 date: 04.21.2016
 tags: markdown
 ```

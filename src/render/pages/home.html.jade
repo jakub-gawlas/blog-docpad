@@ -6,6 +6,11 @@ urls:
 - '/'
 ---
 
-- each post in getCollection('posts').toJSON()
-    != partial('post-list-item', {post: post})
 
+- var posts = getCollection('activePosts').toJSON()
+
+- var blogger = getMostActiveBlogger(posts)
+.well.well-sm #{blogger.name} written the #{blogger.numberPosts} posts.
+
+- each post in posts
+    != partial('post-list-item', {post: post})

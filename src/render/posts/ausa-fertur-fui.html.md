@@ -1,7 +1,7 @@
 ```
 title: Ausa fertur fui
 subtitle: Cum lyram sed puer invita misisset sonum
-author: Lorem Ipsum
+author: Ipsum Lorem
 date: 04.15.2016
 tags: lorem, markdown
 ```

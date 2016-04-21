@@ -9,4 +9,6 @@
             h3.post-subtitle= post.subtitle
     p.post-meta
         | Posted by #{post.author} on #{post.date.toLocaleDateString()}
+        if post.archived
+            i.fa.fa-archive.fa-lg.has-tooltip.archived(data-toggle="tooltip", data-placement="right", title="Archived")
 hr

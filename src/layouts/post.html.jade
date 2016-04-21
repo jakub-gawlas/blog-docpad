@@ -6,4 +6,15 @@ article
     .container
         .row
             .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+
                 != content
+
+                hr
+                p.text-right
+                    i Posted by #{document.author} on #{document.date.toLocaleDateString()}
+                #tags
+                    - each tag in document.tags
+                        a.btn.btn-default(href="/tags/#{tag}")
+                            i.fa.fa-tag
+                            = tag
+
