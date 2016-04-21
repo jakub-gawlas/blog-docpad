@@ -7,5 +7,5 @@ urls:
 ---
 
 - each post in getCollection('posts').toJSON()
-    != partial('post-list-item', {url: post.url, title: post.title, subtitle: post.subtitle, author: post.author, date: post.date })
+    != partial('post-list-item', {post: post})
 

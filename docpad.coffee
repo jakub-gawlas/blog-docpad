@@ -48,7 +48,8 @@ docpadConfig = {
         "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"
         "/vendor/jquery/js/jquery.min.js"
         "/vendor/twitter-bootstrap/js/bootstrap.min.js"
-        "/scripts/clean-blog.js"
+        "/vendor/jquery/js/jquery.bootstrap-autohidingnavbar.js"
+        "/scripts/blog.js"
       ]
 
 
