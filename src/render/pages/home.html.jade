@@ -1,7 +1,11 @@
 ---
 title: Home
 subtitle: "Welcome on the Blog DocPad"
+headerImage: header-home.jpg
 pageOrder: 1
+isPaged: true
+pagedCollection: 'activePosts'
+pageSize: 5
 urls:
 - '/'
 ---
@@ -11,22 +15,26 @@ urls:
 - var bloggers = getBloggers(posts)
 - var mostActiveBlogger = getMostActiveBlogger(posts)
 
-// The most active blogger
-.well.well-sm.bloggers.has-tooltip(data-toggle="tooltip",
-    data-placement="top", title="The most active blogger on given month")
-    .row
-        .col-sm-6.col-xs-12
-            ol
-                li
-                    span.highlighted 1
-                    p #{mostActiveBlogger.name}
-                    p.small #{mostActiveBlogger.numberPosts} posts
-        .col-sm-6.col-xs-12.text-center
-            button.btn.btn-default.btn-sm(type="button", data-toggle="modal", data-target="#modalBloggers") Bloggers
+// The most active blogger shows only on first page
+- if (document.page.number == 0)
+    .well.well-sm.bloggers.has-tooltip(data-toggle="tooltip",
+        data-placement="top", title="The most active blogger on given month")
+        .row
+            .col-sm-6.col-xs-12
+                ol
+                    li
+                        span.highlighted 1
+                        p #{mostActiveBlogger.name}
+                        p.small #{mostActiveBlogger.numberPosts} posts
+            .col-sm-6.col-xs-12.text-center
+                button.btn.btn-default.btn-sm(type="button", data-toggle="modal", data-target="#modalBloggers") Bloggers
 
 // List of posts
-- each post in posts
+- each post in getPageCollection('activePosts').toJSON()
     != partial('post-list-item', {post: post})
+
+// Pager
+!= partial('pager', {toArchive: true})
 
 
 // Modal with bloggers list

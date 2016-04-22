@@ -1,0 +1,15 @@
+// Partial pager
+// parameters:
+//      toArchive: if true and hasn't next page than button goes to Archive
+
+ul.pager
+    if hasPrevPage()
+        li.previous
+            a(href= getPrevPage()) Newer posts
+    if hasNextPage()
+        li.next
+            a(href= getNextPage()) Older posts
+    else if toArchive
+        li.next
+            a(href="/pages/archive") Archived posts
+

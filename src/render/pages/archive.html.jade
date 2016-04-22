@@ -2,8 +2,15 @@
 title: Archive
 subtitle: Posts created over a month ago
 headerImage: header-archive.jpg
+isPaged: true
+pagedCollection: 'archivedPosts'
+pageSize: 5
 pageOrder: 2
 ---
 
-each post in getCollection('archivedPosts').toJSON()
+// List of archived posts
+each post in getPageCollection('archivedPosts').toJSON()
     != partial('post-list-item', {post: post})
+
+// Pager
+!= partial('pager')

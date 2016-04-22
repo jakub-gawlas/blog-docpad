@@ -102,6 +102,7 @@ docpadConfig = {
     # Documents from `pages` dir which have `pageOrder` meta attribute
     pages: (database) ->
       database.findAllLive({
+        relativeOutDirPath: 'pages'
         pageOrder:
           $exists: true
       }, [pageOrder: 1, title: 1])
@@ -110,8 +111,9 @@ docpadConfig = {
 
     # Documents from `posts` dir, newer than a month ago
     activePosts: (database) ->
-      database.findAllLive($and: {
-        relativeOutDirPath: 'posts', date:
+      database.findAllLive({
+        relativeOutDirPath: 'posts'
+        date:
           $gt: getDateMonthAgo()
       }, [{date: -1}, {title: 1}])
       .on "add", (model) ->
@@ -120,8 +122,9 @@ docpadConfig = {
     # Documents from `posts` dir which `date` older than a month ago
     # Tagged as `archived` and return
     archivedPosts: (database) ->
-      return database.findAllLive($and: {
-        relativeOutDirPath: 'posts', date:
+      return database.findAllLive({
+        relativeOutDirPath: 'posts'
+        date:
           $lt: getDateMonthAgo()
       }, [{date: -1}, {title: 1}])
       .on "add", (model) ->
@@ -133,7 +136,7 @@ docpadConfig = {
     tags:
       injectDocumentHelper: (document) ->
         # Set layout of documents for tags
-        document.setMeta(layout: 'tag')
+        document.setMeta({layout: 'tag', headerImage: 'header-tag.jpg'})
 
 
   # =================================
