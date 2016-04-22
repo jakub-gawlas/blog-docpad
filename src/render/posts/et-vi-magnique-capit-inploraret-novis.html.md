@@ -8,18 +8,18 @@ tags: lorem, ipsum
 
 ## Subito potuit
 
+**Pro speciem capi** coniciunt dedit, capit breve sed, id omnia, quodcumque
+rostro. Alti hastae; *adhibent* iam, serta qui, intremuere notam. Optari nec
+dixit Sisyphio quaesistis Actaeonis, quidem; dextraque tutus. Est atque,
+insequitur qui est incingere. Qui amoris tradere et minus ire lato vipereis me
+etiam.
+
 - Sua fugae in crudelis limite supponas
 - Os diversi incubuit
 - Cunctos par pater nigro
 - Medium aut tardae Tarentum caeli moras et
 - Occupat Celadontis cuspidis quid corpora
 - Caespite quam tamen sinistrae corpus bacis viros
-
-**Pro speciem capi** coniciunt dedit, capit breve sed, id omnia, quodcumque
-rostro. Alti hastae; *adhibent* iam, serta qui, intremuere notam. Optari nec
-dixit Sisyphio quaesistis Actaeonis, quidem; dextraque tutus. Est atque,
-insequitur qui est incingere. Qui amoris tradere et minus ire lato vipereis me
-etiam.
 
 Catenis dedit nec. Milibus sine equos Acheloides et fores praedator socerum
 vosque, inde aut corporis nato, hic.

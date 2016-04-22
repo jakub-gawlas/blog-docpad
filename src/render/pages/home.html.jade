@@ -8,9 +8,46 @@ urls:
 
 
 - var posts = getCollection('activePosts').toJSON()
+- var bloggers = getBloggers(posts)
+- var mostActiveBlogger = getMostActiveBlogger(posts)
 
-- var blogger = getMostActiveBlogger(posts)
-.well.well-sm #{blogger.name} written the #{blogger.numberPosts} posts.
+// The most active blogger
+.well.well-sm.bloggers.has-tooltip(data-toggle="tooltip",
+    data-placement="top", title="The most active blogger on given month")
+    .row
+        .col-sm-6.col-xs-12
+            ol
+                li
+                    span.highlighted 1
+                    p #{mostActiveBlogger.name}
+                    p.small #{mostActiveBlogger.numberPosts} posts
+        .col-sm-6.col-xs-12.text-center
+            button.btn.btn-default.btn-sm(type="button", data-toggle="modal", data-target="#modalBloggers") Bloggers
 
+// List of posts
 - each post in posts
     != partial('post-list-item', {post: post})
+
+
+// Modal with bloggers list
+#modalBloggers.modal.fade(tabindex="-1", role="dialog")
+    .modal-dialog
+        .modal-content
+            .modal-header
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true")&times;
+                h4.modal-title Active bloggers on given month
+
+            .modal-body
+                .bloggers
+                    ol
+                        - var i = 1
+                        - each blogger in bloggers
+                            li
+                                span(class= i==1?"highlighted":"") #{i}
+                                p #{blogger[0]}
+                                p.small #{blogger[1]} posts
+                                - ++i
+
+            .modal-footer
+                button.btn.btn-default(type="button", data-dismiss="modal") Close

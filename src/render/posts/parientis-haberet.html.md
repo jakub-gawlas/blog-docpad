@@ -1,7 +1,7 @@
 ```
 title: Parientis haberet
 subtitle: Fero quae exigis sunto abstulit
-author: Lorem Ipsum
+author: Gallus Anonymus
 date: 04.01.2016
 tags: lorem
 ```

@@ -235,7 +235,7 @@ hr {
   }
 }
 
-// List item post
+// Item of posts list
 
 .post-preview {
   > a {
@@ -316,6 +316,10 @@ footer {
   }
 }
 
+.well {
+  .border-radius-zero;
+}
+
 // Buttons
 
 .btn {
@@ -331,6 +335,10 @@ footer {
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+.btn-sm {
+  padding: 10px 35px;
 }
 
 .btn-default {
@@ -391,7 +399,71 @@ footer {
   }
 }
 
-// -- Highlight Color Customization
+// List bloggers
+
+.bloggers {
+  padding-top: 15px;
+  margin-bottom: 50px;
+  ol {
+    list-style-type: none;
+    font-style: italic;
+    li {
+      position: relative;
+      margin: 0;
+      p {
+        font-size: 25px;
+        font-weight: bold;
+        color: @gray-dark;
+        text-transform: uppercase;
+        padding: 0;
+        padding-left: 30px;
+        margin: 0;
+        line-height: 20px;
+        &.small {
+          font-size: 16px;
+          margin: 0;
+          padding-top: 0;
+          font-weight: normal;
+        }
+      }
+      span {
+        position: absolute;
+        font-size: 42px;
+        margin-top: -10px;
+        color: @gray;
+        &.highlighted {
+          color: @brand-primary;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    div:nth-child(2) {
+      padding-top: 10px;
+    }
+  }
+}
+
+// Modal
+
+.modal-dialog {
+  .modal-content {
+    .border-radius-zero;
+    .modal-header {
+      h4 {
+        text-transform: uppercase;
+      }
+    }
+
+    .modal-body {
+      .bloggers ol li {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+// Highlight Color Customization
 
 ::-moz-selection {
   color: white;

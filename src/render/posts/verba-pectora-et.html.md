@@ -6,7 +6,6 @@ date: 02.03.2016
 tags: ipsum, markdown
 ```
 
-
 ## Lorem markdownum
 
 Mihi dentibus elegit mare spissatus scopulis saevae, per abit fugiunt.
